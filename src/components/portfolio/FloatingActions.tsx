@@ -1,7 +1,7 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 import ActionButton from "./ActionButton";
-import { FileText, Github, Linkedin, Mail } from "lucide-react";
+import { FileText, Github, Linkedin, Mail, Youtube } from "lucide-react";
 
 interface FloatingActionsProps {
   className?: string;
@@ -25,22 +25,27 @@ const FloatingActions = ({
     {
       icon: <FileText className="w-6 h-6" />,
       label: "Resume",
-      href: "#resume",
+      href: "resume.pdf",
     },
     {
       icon: <Github className="w-6 h-6" />,
       label: "GitHub",
-      href: "https://github.com",
+      href: "https://github.com/IsaacJ60",
     },
     {
       icon: <Linkedin className="w-6 h-6" />,
       label: "LinkedIn",
-      href: "https://linkedin.com",
+      href: "https://www.linkedin.com/in/isaac6/",
+    },
+    {
+      icon: <Youtube className="w-6 h-6" />,
+      label: "YouTube",
+      href: "https://www.youtube.com/@eyesackle",
     },
     {
       icon: <Mail className="w-6 h-6" />,
       label: "Email",
-      href: "mailto:contact@example.com",
+      href: "mailto:isaac.jiang66@gmail.com",
     },
   ],
 }: FloatingActionsProps) => {

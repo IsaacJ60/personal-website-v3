@@ -47,9 +47,9 @@ const ProjectCard = ({
   return (
     <Card
       className={cn(
-        "overflow-hidden group transition-all duration-300 ease-in-out",
+        "overflow-hidden group transition-all duration-300 ease-in-out h-full",
         "hover:shadow-lg hover:-translate-y-1",
-        "relative",
+        "relative flex flex-col",
         className,
       )}
       style={
@@ -77,7 +77,8 @@ const ProjectCard = ({
         </AspectRatio>
       </CardHeader>
 
-      <CardContent className="p-6">
+      <CardContent className="p-6 flex flex-col flex-grow">
+        <div className="flex-grow">
         <h3
           className="text-xl font-semibold mb-2 transition-colors duration-300"
           style={{ color: secondaryColor }}
@@ -90,8 +91,10 @@ const ProjectCard = ({
         >
           {description}
         </p>
+        </div>
 
-        <div className="flex flex-wrap gap-2 mb-4">
+        <div className="mt-auto">
+        <div className="flex flex-wrap gap-2 mb-4 align-bottom">
           {tags.map((tag) => (
             <span
               key={tag}
@@ -107,26 +110,27 @@ const ProjectCard = ({
         </div>
 
         <div className="flex gap-4">
-          <a
-            href={githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1 text-sm transition-colors duration-300"
-            style={{ color: primaryColor }}
-          >
-            <Github className="w-4 h-4" />
-            <span>Code</span>
-          </a>
-          <a
-            href={liveUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1 text-sm transition-colors duration-300"
-            style={{ color: primaryColor }}
-          >
-            <ExternalLink className="w-4 h-4" />
-            <span>Live Demo</span>
-          </a>
+            <a
+              href={githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-sm transition-colors duration-300"
+              style={{ color: primaryColor }}
+            >
+              <Github className="w-4 h-4" />
+              <span>Code</span>
+            </a>
+            <a
+              href={liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-sm transition-colors duration-300"
+              style={{ color: primaryColor }}
+            >
+              <ExternalLink className="w-4 h-4" />
+              <span>Live Demo</span>
+            </a>
+          </div>
         </div>
       </CardContent>
     </Card>

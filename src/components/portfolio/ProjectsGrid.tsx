@@ -27,31 +27,85 @@ const ProjectsGrid = ({
   colors,
   projects = [
     {
-      title: "E-Commerce Platform",
+      title: "HealthScreen",
       description:
-        "A full-featured online shopping platform with cart management and secure checkout.",
-      imageUrl: "https://dummyimage.com/464x261/e1f5e1/1f8c4f&text=E-Commerce",
+        "A medical screening application for patient use in free clinics in Detroit, MI, for an under-served patient population.",
+      imageUrl: "/images/healthscreen.png",
       githubUrl: "#",
       liveUrl: "#",
-      tags: ["React", "Node.js", "MongoDB"],
+      tags: ["Firebase", "Flutter", "Dart"],
     },
     {
-      title: "Task Management App",
+      title: "PowerNote",
       description:
-        "A collaborative task management tool with real-time updates and team features.",
-      imageUrl: "https://dummyimage.com/464x261/e1f5e1/1f8c4f&text=Task+App",
+        "An AI-powered flashcard and note generator.",
+      imageUrl: "/images/powernote.png",
       githubUrl: "#",
       liveUrl: "#",
-      tags: ["React", "Firebase", "Material-UI"],
+      tags: ["Java Swing", "Python", "Apache POI", "OpenAI API"],
     },
     {
-      title: "Weather Dashboard",
+      title: "KanBoy",
       description:
-        "A weather forecasting application with interactive maps and detailed analytics.",
-      imageUrl: "https://dummyimage.com/464x261/e1f5e1/1f8c4f&text=Weather+App",
+        "The only Discord-based Kanban board you'll ever need.",
+      imageUrl: "/images/kanboy.png",
       githubUrl: "#",
       liveUrl: "#",
-      tags: ["React", "OpenWeather API", "Chart.js"],
+      tags: ["React", "Discord API", "Python"],
+    },
+    {
+      title: "Alan's Adventure",
+      description:
+        "A Downwell-inspired game made purely in Java Swing.",
+      imageUrl: "/images/alansadventure.png",
+      githubUrl: "#",
+      liveUrl: "#",
+      tags: ["Java Swing", "Game Development"],
+    },
+    {
+      title: "FyLy",
+      description:
+        "An AI-powered file organizer and command line application.",
+      imageUrl: "/images/fyly.png",
+      githubUrl: "#",
+      liveUrl: "#",
+      tags: ["Taipy", "Python Click", "OpenAI API"],
+    },
+    {
+      title: "SideSchedule",
+      description:
+        "An AI-powered scheduler app, with Google Calendar integration.",
+      imageUrl: "/images/sideschedule.png",
+      githubUrl: "#",
+      liveUrl: "#",
+      tags: ["React", "Discord API", "Python"],
+    },
+    {
+      title: "SurveyScreen",
+      description:
+        "An AI-powered general health screening tool, made as a web variant/prototype to HealthScreen.",
+      imageUrl: "/images/surveyscreen.png",
+      githubUrl: "#",
+      liveUrl: "#",
+      tags: ["React"],
+    },
+    {
+      title: "Arkanoid",
+      description:
+        "A remake of the classic Arkanoid game, made purely in Java Swing.",
+      imageUrl: "/images/arkanoid.png",
+      githubUrl: "#",
+      liveUrl: "#",
+      tags: ["Java Swing", "Game Development"],
+    },
+    {
+      title: "PAINT (AoT Edition)",
+      description:
+        "A reacreation of the classic MS Paint, with an Attack on Titan twist.",
+      imageUrl: "/images/aotpaint.png",
+      githubUrl: "#",
+      liveUrl: "#",
+      tags: ["Python", "Pygame"],
     },
   ],
 }: ProjectsGridProps) => {

@@ -96,9 +96,11 @@ const Home = () => {
                 color: `rgb(${currentColors.primary.r}, ${currentColors.primary.g}, ${currentColors.primary.b})`,
               }}
             >
-              I'm a passionate developer with expertise in building modern web
-              applications. My focus is on creating intuitive and performant
-              user experiences using cutting-edge technologies.
+              Throughout my childhood, I've always been interested in mathematics and programming.
+              My favourite subject throughout my eight long years of elementary school was always math,
+              which switched to computer science throughout the duration of high school. I guess this happened
+              because at the ripe old age of 12, my dad, wielding his fantasical Chinese math and engineering degrees,
+              began teaching me about computers, and how to code in Python.
             </p>
             <p
               className="text-lg transition-colors duration-300"
@@ -106,9 +108,9 @@ const Home = () => {
                 color: `rgb(${currentColors.primary.r}, ${currentColors.primary.g}, ${currentColors.primary.b})`,
               }}
             >
-              When I'm not coding, you can find me exploring new technologies,
-              contributing to open-source projects, or sharing knowledge with
-              the developer community.
+              I've loved AI ever since I watched the first Transformers movie,
+              even though I didn't even know what AI was at the time. My other interests include playing badminton,
+              writing (a lot), and playing video games (I spent an unhealthy amount of time playing during COVID).
             </p>
           </div>
         </div>

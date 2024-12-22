@@ -26,36 +26,44 @@ const Timeline = ({
   colors,
   experiences = [
     {
-      date: "2022 - Present",
-      title: "Senior Full Stack Developer",
-      company: "Tech Innovations Inc.",
-      location: "San Francisco, CA",
+      date: "December 2024 - Present",
+      title: "CxC Coordinator",
+      company: "University of Waterloo Data Science Club",
+      location: "Waterloo, ON",
       description:
-        "Leading development of enterprise applications and mentoring junior developers.",
+        "Organized hacker logistics, dealing with distribution of information (handbooks, application questions, judging criteria, etc.) and creating/managing the Discord server and Devpost page.",
     },
     {
-      date: "2020 - 2022",
-      title: "Full Stack Developer",
-      company: "Digital Solutions Co.",
-      location: "New York, NY",
+      date: "June 2023 – Aug. 2023",
+      title: "Research Intern",
+      company: "University of Windsor",
+      location: "Windsor, ON",
       description:
-        "Developed and maintained multiple client-facing web applications.",
+        "Used NumPy and Pandas to implement new code for ReQue, a benchmark workflow and dataset collection for Query Refinement, to measure the efficacy of a new backtranslation expander.",
     },
     {
-      date: "2018 - 2020",
-      title: "Frontend Developer",
-      company: "Web Creators Ltd.",
-      location: "Boston, MA",
+      date: "April 2023 – Aug. 2023",
+      title: "Data Science Intern",
+      company: "Riverside Minor Baseball Association",
+      location: "Windsor, ON",
       description:
-        "Specialized in creating responsive and accessible user interfaces.",
+        "Used React, MySQL, and Express.js to create a player management system, increasing player data retrieval speed by 200%. Automated and managed rosters and schedules for 6 age groups, totaling to 30+ teams and 360+ players",
     },
     {
-      date: "2016 - 2018",
-      title: "Junior Developer",
-      company: "Startup Hub",
-      location: "Austin, TX",
+      date: "June 2023 – July 2023",
+      title: "Co-Founder",
+      company: "CodeQuest",
+      location: "Windsor, ON",
       description:
-        "Started career working on various web development projects and learning modern technologies.",
+        "Organized a week-long summer camp teaching Grade 5-8 students the fundamentals of problem solving and coding in Python with the graphics library Pygame",
+    },
+    {
+      date: "Sept. 2023 – June 2024",
+      title: "Computer Science Instructor",
+      company: "Vincent Massey Computer Science Club",
+      location: "Windsor, ON",
+      description:
+        "Created lesson plans in Python to teach algorithms and data structures such as breadth-first search, recursion, arrays, hash-maps, and strings to 30+ students",
     },
   ],
 }: TimelineProps) => {
