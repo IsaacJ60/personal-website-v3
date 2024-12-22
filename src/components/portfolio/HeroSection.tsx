@@ -67,8 +67,8 @@ const HeroSection = ({
           >
             {title}
           </h2>
-          <p className="text-lg text-blue-100 max-w-lg">{subtitle}</p>
-        </div>
+          <p className="text-lg text-blue-100 max-w-lg" style={{ paddingBottom: "20px" }}>{subtitle}</p>
+          </div>
       </div>
     </section>
   );

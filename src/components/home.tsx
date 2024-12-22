@@ -72,6 +72,7 @@ const Home = () => {
       <SnowEffect />
       <Navigation colors={currentColors} />
       <HeroSection colors={currentColors} />
+      <FloatingActions colors={currentColors} />
 
       <section
         id="about"
@@ -118,7 +119,6 @@ const Home = () => {
 
       <ProjectsGrid colors={currentColors} />
       <Timeline colors={currentColors} />
-      <FloatingActions colors={currentColors} />
     </div>
   );
 };

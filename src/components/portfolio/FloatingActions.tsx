@@ -59,34 +59,63 @@ const FloatingActions = ({
     ? `rgba(${colors.primary.r}, ${colors.primary.g}, ${colors.primary.b}, 0.1)`
     : "rgba(100, 181, 246, 0.1)";
 
-  return (
-    <div
-      className={cn(
-        "fixed right-6 top-1/2 -translate-y-1/2 z-50",
-        "flex flex-col gap-4",
-        "backdrop-blur-sm rounded-full py-4 px-2",
-        "transition-all duration-300",
-        className,
-      )}
-      style={{
-        backgroundColor: bgColor,
-        borderColor: borderColor,
-        borderWidth: "1px",
-        borderStyle: "solid",
-        boxShadow: `0 4px 6px -1px ${shadowColor}, 0 2px 4px -2px ${shadowColor}`,
-      }}
-    >
-      {actions.map((action, index) => (
-        <ActionButton
-          key={index}
-          colors={colors}
-          icon={action.icon}
-          label={action.label}
-          href={action.href}
-        />
-      ))}
-    </div>
-  );
-};
+    return (
+      <>
+        {/* Desktop floating actions */}
+        <div
+          className={cn(
+            "fixed right-6 top-1/2 -translate-y-1/2 z-50",
+            "hidden md:flex flex-col gap-4",
+            "backdrop-blur-sm rounded-full py-4 px-2",
+            "transition-all duration-300",
+            className,
+          )}
+          style={{
+            backgroundColor: bgColor,
+            borderColor: borderColor,
+            borderWidth: "1px",
+            borderStyle: "solid",
+            boxShadow: `0 4px 6px -1px ${shadowColor}, 0 2px 4px -2px ${shadowColor}`,
+          }}
+        >
+          {actions.map((action, index) => (
+            <ActionButton
+              key={index}
+              colors={colors}
+              icon={action.icon}
+              label={action.label}
+              href={action.href}
+            />
+          ))}
+        </div>
+  
+        {/* Mobile horizontal buttons */}
+        <div className="md:hidden w-full px-6 py-8 flex flex-wrap justify-center gap-4 bg-transparent">
+          {actions.map((action, index) => (
+            <a
+              key={index}
+              href={action.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={cn(
+                "flex items-center gap-2 px-4 py-2 rounded-full",
+                "transition-all duration-300 ease-in-out",
+                "hover:-translate-y-1",
+              )}
+              style={{
+                backgroundColor: `rgba(${colors?.primary.r || 100}, ${colors?.primary.g || 181}, ${colors?.primary.b || 246}, 0.1)`,
+                color: colors
+                  ? `rgb(${colors.primary.r}, ${colors.primary.g}, ${colors.primary.b})`
+                  : "#64B5F6",
+              }}
+            >
+              {action.icon}
+              <span className="text-sm font-medium">{action.label}</span>
+            </a>
+          ))}
+        </div>
+      </>
+    );
+  };
 
 export default FloatingActions;
