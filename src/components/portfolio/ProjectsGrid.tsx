@@ -30,7 +30,7 @@ const ProjectsGrid = ({
       title: "HealthScreen",
       description:
         "A medical screening application for patient use in free clinics in Detroit, MI, for an under-served patient population.",
-      imageUrl: "/images/healthscreen.png",
+      imageUrl: "src/images/healthscreen.png",
       githubUrl: "#",
       liveUrl: "#",
       tags: ["Firebase", "Flutter", "Dart"],
@@ -39,7 +39,7 @@ const ProjectsGrid = ({
       title: "PowerNote",
       description:
         "An AI-powered flashcard and note generator.",
-      imageUrl: "/images/powernote.png",
+      imageUrl: "src/images/powernote.png",
       githubUrl: "#",
       liveUrl: "#",
       tags: ["Java Swing", "Python", "Apache POI", "OpenAI API"],
@@ -48,7 +48,7 @@ const ProjectsGrid = ({
       title: "KanBoy",
       description:
         "The only Discord-based Kanban board you'll ever need.",
-      imageUrl: "/images/kanboy.png",
+      imageUrl: "src/images/kanboy.png",
       githubUrl: "#",
       liveUrl: "#",
       tags: ["React", "Discord API", "Python"],
@@ -57,7 +57,7 @@ const ProjectsGrid = ({
       title: "Alan's Adventure",
       description:
         "A Downwell-inspired game made purely in Java Swing.",
-      imageUrl: "/images/alansadventure.png",
+      imageUrl: "src/images/alansadventure.png",
       githubUrl: "#",
       liveUrl: "#",
       tags: ["Java Swing", "Game Development"],
@@ -66,7 +66,7 @@ const ProjectsGrid = ({
       title: "FyLy",
       description:
         "An AI-powered file organizer and command line application.",
-      imageUrl: "/images/fyly.png",
+      imageUrl: "src/images/fyly.png",
       githubUrl: "#",
       liveUrl: "#",
       tags: ["Taipy", "Python Click", "OpenAI API"],
@@ -75,7 +75,7 @@ const ProjectsGrid = ({
       title: "SideSchedule",
       description:
         "An AI-powered scheduler app, with Google Calendar integration.",
-      imageUrl: "/images/sideschedule.png",
+      imageUrl: "src/images/sideschedule.png",
       githubUrl: "#",
       liveUrl: "#",
       tags: ["React", "Discord API", "Python"],
@@ -84,7 +84,7 @@ const ProjectsGrid = ({
       title: "SurveyScreen",
       description:
         "An AI-powered general health screening tool, made as a web variant/prototype to HealthScreen.",
-      imageUrl: "/images/surveyscreen.png",
+      imageUrl: "src/images/surveyscreen.png",
       githubUrl: "#",
       liveUrl: "#",
       tags: ["React"],
@@ -93,7 +93,7 @@ const ProjectsGrid = ({
       title: "Arkanoid",
       description:
         "A remake of the classic Arkanoid game, made purely in Java Swing.",
-      imageUrl: "/images/arkanoid.png",
+      imageUrl: "src/images/arkanoid.png",
       githubUrl: "#",
       liveUrl: "#",
       tags: ["Java Swing", "Game Development"],
@@ -102,7 +102,7 @@ const ProjectsGrid = ({
       title: "PAINT (AoT Edition)",
       description:
         "A reacreation of the classic MS Paint, with an Attack on Titan twist.",
-      imageUrl: "/images/aotpaint.png",
+      imageUrl: "src/images/aotpaint.png",
       githubUrl: "#",
       liveUrl: "#",
       tags: ["Python", "Pygame"],
