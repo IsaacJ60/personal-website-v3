@@ -27,15 +27,15 @@ const Timeline = ({
   experiences = [
     {
       date: "December 2024 - Present",
-      title: "CxC Coordinator",
+      title: "Hacker Logistics Lead",
       company: "University of Waterloo Data Science Club",
       location: "Waterloo, ON",
       description:
-        "Organized hacker logistics, dealing with distribution of information (handbooks, application questions, judging criteria, etc.) and creating/managing the Discord server and Devpost page.",
+        "Organized hacker logistics, dealing with distribution of information (handbooks, application questions, judging criteria, etc.) and creating/managing communication and submission channels.",
     },
     {
       date: "June 2023 – Aug. 2023",
-      title: "Research Intern",
+      title: "Research Assistant",
       company: "University of Windsor",
       location: "Windsor, ON",
       description:
@@ -43,11 +43,11 @@ const Timeline = ({
     },
     {
       date: "April 2023 – Aug. 2023",
-      title: "Data Science Intern",
+      title: "Software Engineering Intern",
       company: "Riverside Minor Baseball Association",
       location: "Windsor, ON",
       description:
-        "Used React, MySQL, and Express.js to create a player management system, increasing player data retrieval speed by 200%. Automated and managed rosters and schedules for 6 age groups, totaling to 30+ teams and 360+ players",
+        "Used Pandas and Numpy to create a player management system, increasing player data retrieval speed by 200%. Automated and managed rosters and schedules for 6 age groups, totaling to 30+ teams and 360+ players",
     },
     {
       date: "June 2023 – July 2023",
@@ -72,13 +72,10 @@ const Timeline = ({
       id="experience"
       className={cn(
         "py-24 px-6 transition-colors duration-300",
-        "relative overflow-hidden",
+        "overflow-hidden",
         className,
       )}
       style={{
-        backgroundColor: colors
-          ? `rgb(${colors.bg.r}, ${colors.bg.g}, ${colors.bg.b})`
-          : "#0A192F",
       }}
     >
       <div className="container mx-auto relative">

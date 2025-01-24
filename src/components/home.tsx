@@ -29,17 +29,17 @@ const Home = () => {
   }, []);
 
   // Color schemes
-  const startColors = {
-    bg: { r: 10, g: 25, b: 47 }, // #0A192F
+  const endColors = {
+    bg: { r: 13, g: 16, b: 29 }, //rgb(5, 13, 26)
     primary: { r: 100, g: 181, b: 246 }, // #64B5F6
     secondary: { r: 144, g: 202, b: 249 }, // #90CAF9
     border: { r: 17, g: 34, b: 64 }, // #112240
   };
 
-  const endColors = {
-    bg: { r: 38, g: 13, b: 0 }, // #260D00
-    primary: { r: 251, g: 146, b: 60 }, // #fb923c
-    secondary: { r: 253, g: 186, b: 116 }, // #fdb874
+  const startColors = {
+    bg: { r: 25, g: 10, b: 0 }, //rgb(27, 10, 0)
+    primary: { r: 224, g: 130, b: 54 }, //rgb(196, 114, 47)
+    secondary: { r: 253, g: 186, b: 116 }, //rgb(218, 155, 93)
     border: { r: 76, g: 29, b: 0 }, // #4C1D00
   };
 
@@ -69,49 +69,84 @@ const Home = () => {
         backgroundColor: `rgb(${currentColors.bg.r}, ${currentColors.bg.g}, ${currentColors.bg.b})`,
       }}
     >
-      <SnowEffect />
+      <SnowEffect/>
       <Navigation colors={currentColors} />
       <HeroSection colors={currentColors} />
       <FloatingActions colors={currentColors} />
+      
+      <div className="backdrop-blur-sm">
 
       <section
         id="about"
-        className="py-24 px-6 transition-colors duration-300"
+        className=" py-24 px-6 transition-colors duration-300 border-t"
         style={{
-          backgroundColor: `rgb(${currentColors.bg.r}, ${currentColors.bg.g}, ${currentColors.bg.b})`,
+          borderColor: `rgb(${currentColors.border.r}, ${currentColors.border.g}, ${currentColors.border.b})`,
         }}
       >
         <div className="container mx-auto">
           <h2
-            className="text-3xl font-bold mb-8 text-center transition-colors duration-300"
+            className="text-3xl font-bold mb-10 text-center transition-colors duration-300"
             style={{
               color: `rgb(${currentColors.secondary.r}, ${currentColors.secondary.g}, ${currentColors.secondary.b})`,
             }}
           >
             About Me
           </h2>
-          <div className="max-w-2xl mx-auto text-center">
+          <div className="text-lg/8 max-w-4xl mx-auto text-center tracking-wide">
             <p
-              className="text-lg mb-6 transition-colors duration-300"
+              className=" mb-6 transition-colors duration-300"
               style={{
                 color: `rgb(${currentColors.primary.r}, ${currentColors.primary.g}, ${currentColors.primary.b})`,
               }}
             >
-              Throughout my childhood, I've always been interested in mathematics and programming.
-              My favourite subject throughout my eight long years of elementary school was always math,
-              which switched to computer science throughout the duration of high school. I guess this happened
-              because at the ripe old age of 12, my dad, wielding his fantasical Chinese math and engineering degrees,
-              began teaching me about computers, and how to code in Python.
+              As a child, I loved math and programming.
+              After all, in elementary school, math was my favorite subject, and by high school,
+              that passion had naturally evolved into a love for computer science.
+              So, of course, at the ripe age of 12, my dad—armed with his exciting math and engineering degrees—introduced me to&hellip; Python!
+              Since that time, I’ve been coding projects, big and small.
+
+
             </p>
             <p
-              className="text-lg transition-colors duration-300"
+              className=" mb-6 transition-colors duration-300 "
               style={{
                 color: `rgb(${currentColors.primary.r}, ${currentColors.primary.g}, ${currentColors.primary.b})`,
               }}
             >
-              I've loved AI ever since I watched the first Transformers movie,
-              even though I didn't even know what AI was at the time. My other interests include playing badminton,
-              writing (a lot), and playing video games (I spent an unhealthy amount of time playing during COVID).
+              Another one of my most sincere and personal passions lies in storytelling. 
+
+        
+            </p>
+
+            <p
+              className="mb-6 transition-colors duration-300"
+              style={{
+                color: `rgb(${currentColors.primary.r}, ${currentColors.primary.g}, ${currentColors.primary.b})`,
+              }}
+            >
+
+              For me, storytelling is something that transcends the places and realities that we live in. I've found, in particular,
+              three mediums I love using: video editing, writing, and programming. Whether I’m piecing together moments that are rendered
+              in a .mov file, typing out words into a .docx, or writing a try-except in a .py file, I’m always looking for ways to create something special.
+            </p>
+
+            <p
+              className=" mb-10 transition-colors duration-300 "
+              style={{
+                color: `rgb(${currentColors.primary.r}, ${currentColors.primary.g}, ${currentColors.primary.b})`,
+              }}
+            >
+              With videos, I can create narrative's that are easy to understand and appreciate. With writing, I can create intricate worlds with histories yet to be told.
+              With programming, I can tell the story of games and big data.
+            </p>
+
+            <p
+              className="text-sm transition-colors duration-300 font-mono"
+              style={{
+                color: `rgb(${currentColors.primary.r}, ${currentColors.primary.g}, ${currentColors.primary.b})`,
+              }}
+            >
+              (feeling very inspired after writing this&hellip; time for a new project! 😂)
             </p>
           </div>
         </div>
@@ -119,6 +154,8 @@ const Home = () => {
 
       <ProjectsGrid colors={currentColors} />
       <Timeline colors={currentColors} />
+
+      </div>
     </div>
   );
 };

@@ -35,6 +35,9 @@ const Avatar = ({
   const secondaryColor = colors
     ? `rgb(${colors.secondary.r}, ${colors.secondary.g}, ${colors.secondary.b})`
     : "#90CAF9";
+    const borderColor = colors
+    ? `rgba(${colors.primary.r}, ${colors.primary.g}, ${colors.primary.b}, 0.3)`
+    : "rgb(20, 129, 218)";
   const glowColor = colors
     ? `rgba(${colors.primary.r}, ${colors.primary.g}, ${colors.primary.b}, 0.2)`
     : "rgba(100, 181, 246, 0.2)";
@@ -52,7 +55,7 @@ const Avatar = ({
     <div className="relative group">
       {/* Corona effect - outer glow */}
       <div
-        className="absolute -inset-3 rounded-full blur-lg group-hover:opacity-30 transition-all duration-500"
+        className="absolute -inset-3 rounded-full blur-3xl group-hover:opacity-30 transition-all duration-500"
         style={{
           backgroundColor: primaryColor,
           opacity: 0.2,
@@ -68,11 +71,10 @@ const Avatar = ({
         )}
         style={
           {
-            backgroundColor: bgColor,
+            backgroundColor: borderColor,
             borderWidth: 4,
-            borderStyle: "solid",
-            borderColor: primaryColor,
-            boxShadow: `0 0 20px ${shadowColor}`,
+            borderColor: borderColor,
+            boxShadow: `0 0 50px ${shadowColor}`,
             "--hover-border-color": secondaryColor,
             "--hover-shadow-color": shadowHoverColor,
           } as React.CSSProperties

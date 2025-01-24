@@ -45,7 +45,7 @@ const HeroSection = ({
       style={style}
     >
       {/* Overlay to ensure text readability */}
-      <div className="absolute inset-0 bg-black/30" />
+      <div className="absolute inset-0 bg-black/25" />
 
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-center gap-12 md:gap-24 relative">
         {/* Avatar */}
@@ -57,17 +57,20 @@ const HeroSection = ({
         <div className="text-center md:text-left">
           <h1
             className="font-inter text-4xl md:text-5xl lg:text-6xl font-bold mb-4 transition-colors duration-300"
-            style={{ color: secondaryColor }}
+            style={{ color: primaryColor }}
           >
             {name}
           </h1>
           <h2
             className="text-xl md:text-2xl font-semibold mb-3 transition-colors duration-300"
-            style={{ color: primaryColor }}
+            style={{ color: secondaryColor }}
           >
             {title}
           </h2>
-          <p className="text-lg text-blue-100 max-w-lg" style={{ paddingBottom: "20px" }}>{subtitle}</p>
+          <p className="text-lg max-w-lg" style={{
+            paddingBottom: "20px",
+            color: primaryColor
+            }}>{subtitle}</p>
           </div>
       </div>
     </section>

@@ -60,12 +60,6 @@ const ProjectCard = ({
         } as React.CSSProperties
       }
     >
-      <div
-        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-        style={{
-          background: `radial-gradient(circle at center, ${primaryColor}10 0%, transparent 70%)`,
-        }}
-      />
 
       <CardHeader className="p-0">
         <AspectRatio ratio={16 / 9} className="bg-[#112240]">

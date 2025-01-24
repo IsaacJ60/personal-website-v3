@@ -90,7 +90,7 @@ const FloatingActions = ({
         </div>
   
         {/* Mobile horizontal buttons */}
-        <div className="md:hidden w-full px-6 py-8 flex flex-wrap justify-center gap-4 bg-transparent">
+        <div className="md:hidden w-full px-6 py-8 flex flex-wrap justify-center gap-4 bg-transparent border-t border-[#4C1D00]">
           {actions.map((action, index) => (
             <a
               key={index}

@@ -1,150 +1,138 @@
 import React, { useEffect, useRef } from "react";
 
-const StarEffect = () => {
+const StarEffect: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext("2d", { willReadFrequently: true });
+    const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    // Enable much stronger blur for smoother glow
-    ctx.shadowBlur = 65;
-    ctx.shadowColor = "rgba(255, 255, 255, 0.9)";
-
-    // Set canvas size to window size
-    const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      // Reset blur after resize
-      ctx.shadowBlur = 65;
-      ctx.shadowColor = "rgba(255, 255, 255, 0.9)";
-    };
-    resizeCanvas();
-    window.addEventListener("resize", resizeCanvas);
-
-    // Star particles
+    let animationFrameId: number;
     const particles: Array<{
       x: number;
       y: number;
-      radius: number;
       speed: number;
       opacity: number;
       pulse: number;
       pulseSpeed: number;
-      glowSize: number;
+      size: number;
+      rotation: number;
+      rotationSpeed: number;
     }> = [];
+    const starImage = new Image();
+    starImage.src = "src/star.png"; // Replace with the path to your star image
 
-    // Create particles
-    const createParticles = () => {
-      const particleCount = Math.floor(window.innerWidth / 8); // Reduced frequency
+    // Resize canvas
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      initParticles();
+    };
+
+    // Throttle resize events
+    let resizeTimeout: number | undefined;
+    const handleResize = () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = window.setTimeout(resizeCanvas, 100);
+    };
+
+    // Initialize particles
+    const initParticles = () => {
+      particles.length = 0;
+      const particleCount = Math.floor(window.innerWidth / 32);
+
       for (let i = 0; i < particleCount; i++) {
-        // Create different size categories with less variation
         const sizeCategory = Math.random();
-        let radius, opacity, glowSize;
+        let size, opacity;
 
-        if (sizeCategory < 0.8) {
-          // 80% tiny stars
-          radius = Math.random() * 0.15 + 0.1; // 0.1-0.25
-          opacity = Math.random() * 0.2 + 0.15;
-          glowSize = 5;
-        } else if (sizeCategory < 0.95) {
-          // 15% medium stars
-          radius = Math.random() * 0.15 + 0.2; // 0.2-0.35
-          opacity = Math.random() * 0.25 + 0.2;
-          glowSize = 7;
+        if (sizeCategory < 0.7) {
+          size = Math.random() * 10 + 5; // Tiny stars
+          opacity = Math.random();
+        } else if (sizeCategory < 0.9) {
+          size = Math.random() * 15 + 10; // Medium stars
+          opacity = Math.random();
         } else {
-          // 5% large stars
-          radius = Math.random() * 0.15 + 0.3; // 0.3-0.45
-          opacity = Math.random() * 0.3 + 0.25;
-          glowSize = 9;
+          size = Math.random() * 20 + 15; // Large stars
+          opacity = Math.random();
         }
 
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
-          radius,
-          speed: Math.random() * 0.015 + 0.003,
+          speed: Math.random() * 0.5 + 0.1,
           opacity,
-          pulse: Math.random() * Math.PI * 2,
-          pulseSpeed: Math.random() * 0.015 + 0.003,
-          glowSize,
+          pulse: Math.random() * Math.PI,
+          pulseSpeed: Math.random() * 0.02,
+          size,
+          rotation: Math.random() * Math.PI, // Initial random rotation
+          rotationSpeed: Math.random() * 0.002 - 0.001, // Random rotation speed (-0.01 to 0.01)
         });
       }
     };
-    createParticles();
 
-    // Animation loop
+    // Draw stars
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       particles.forEach((particle) => {
-        // Update pulse
+        // Update pulse for twinkle effect
         particle.pulse += particle.pulseSpeed;
-        const twinkle = Math.sin(particle.pulse) * 0.3 + 0.7;
+        const twinkle = Math.sin(particle.pulse) * 0.3 + 0.4;
 
-        // Draw star with enhanced glow
-        const gradient = ctx.createRadialGradient(
-          particle.x,
-          particle.y,
-          0,
-          particle.x,
-          particle.y,
-          particle.radius * particle.glowSize,
+        // Update rotation
+        particle.rotation += particle.rotationSpeed;
+
+        // Save canvas state
+        ctx.save();
+
+        // Move canvas to particle position, apply rotation, and draw the image
+        ctx.translate(particle.x + particle.size / 2, particle.y + particle.size / 2);
+        ctx.rotate(particle.rotation);
+        ctx.globalAlpha = particle.opacity * twinkle;
+        ctx.drawImage(
+          starImage,
+          -particle.size / 2,
+          -particle.size / 2,
+          particle.size,
+          particle.size
         );
 
-        const opacity = particle.opacity * twinkle;
-        gradient.addColorStop(0, `rgba(255, 255, 255, ${opacity})`);
-        gradient.addColorStop(0.1, `rgba(255, 255, 255, ${opacity * 0.95})`);
-        gradient.addColorStop(0.3, `rgba(255, 255, 255, ${opacity * 0.6})`);
-        gradient.addColorStop(0.6, `rgba(255, 255, 255, ${opacity * 0.3})`);
-        gradient.addColorStop(0.8, `rgba(255, 255, 255, ${opacity * 0.1})`);
-        gradient.addColorStop(1, "rgba(255, 255, 255, 0)");
+        // Restore canvas state
+        ctx.restore();
 
-        // Draw outer glow
-        ctx.beginPath();
-        ctx.fillStyle = gradient;
-        ctx.arc(
-          particle.x,
-          particle.y,
-          particle.radius * particle.glowSize,
-          0,
-          Math.PI * 2,
-        );
-        ctx.fill();
-
-        // Draw star core with blur
-        ctx.beginPath();
-        ctx.fillStyle = `rgba(255, 255, 255, ${opacity * 1.2})`;
-        ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
-        ctx.fill();
-
-        // Update position - very slow vertical movement
-        particle.y += particle.speed;
-
-        // Reset position if out of bounds
-        if (particle.y > canvas.height) {
-          particle.y = -5;
-          particle.x = Math.random() * canvas.width;
+        // Update position
+        particle.x += particle.speed;
+        if (particle.x > canvas.width) {
+          particle.x = -particle.size;
+          particle.y = Math.random() * canvas.height;
         }
       });
 
-      requestAnimationFrame(animate);
+      ctx.globalAlpha = 1; // Reset globalAlpha
+      animationFrameId = requestAnimationFrame(animate);
     };
-    animate();
+
+    // Initialize and start animation
+    starImage.onload = () => {
+      resizeCanvas();
+      animate();
+    };
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener("resize", resizeCanvas);
+      window.removeEventListener("resize", handleResize);
+      cancelAnimationFrame(animationFrameId);
     };
   }, []);
 
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 pointer-events-none z-50"
-      style={{ opacity: 0.25 }}
+      className="fixed inset-0 pointer-events-none z-49"
+      style={{ opacity: 0.8 }}
     />
   );
 };
