@@ -25,7 +25,7 @@ const FloatingActions = ({
     {
       icon: <FileText className="w-6 h-6" />,
       label: "Resume",
-      href: "https://drive.google.com/file/d/1OJ7T7Lyuj10YFyhx01YfqDykkIRrfNbX/view?usp=sharing",
+      href: "https://drive.google.com/file/d/1HGToimt_RaP3lbGd-C5dVju_uz2LsulG/view?usp=sharing",
     },
     {
       icon: <Github className="w-6 h-6" />,

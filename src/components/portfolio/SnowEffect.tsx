@@ -23,10 +23,11 @@ const StarEffect: React.FC = () => {
       rotationSpeed: number;
     }> = [];
     const starImage = new Image();
-    starImage.src = "src/star.png"; // Replace with the path to your star image
+    starImage.src = "https://raw.githubusercontent.com/IsaacJ60/personal-website-v3/refs/heads/master/src/star.png"; // Replace with the path to your star image
 
     // Resize canvas
     const resizeCanvas = () => {
+      if (canvas.width === window.innerWidth && canvas.height === window.innerHeight) return;
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
       initParticles();
@@ -36,7 +37,7 @@ const StarEffect: React.FC = () => {
     let resizeTimeout: number | undefined;
     const handleResize = () => {
       clearTimeout(resizeTimeout);
-      resizeTimeout = window.setTimeout(resizeCanvas, 100);
+      resizeTimeout = window.setTimeout(resizeCanvas, 200);
     };
 
     // Initialize particles
