@@ -26,12 +26,20 @@ const Timeline = ({
   colors,
   experiences = [
     {
+      date: "February 2025 - Present",
+      title: "Web Developer",
+      company: "University of Waterloo Japanese Student Association",
+      location: "Waterloo, ON",
+      description:
+        "Developing and maintaining the club's website, using React, TypeScript, and Figma.",
+    },
+    {
       date: "December 2024 - Present",
-      title: "Hacker Logistics Lead",
+      title: "Logistics Lead",
       company: "University of Waterloo Data Science Club",
       location: "Waterloo, ON",
       description:
-        "Organized hacker logistics, dealing with distribution of information (handbooks, application questions, judging criteria, etc.) and creating/managing communication and submission channels.",
+        "Organized event logistics, dealing with distribution of information (handbooks, application questions, judging criteria, etc.) and creating/managing communication and submission channels.",
     },
     {
       date: "June 2023 – Aug. 2023",
