@@ -31,16 +31,34 @@ const ProjectsGrid = ({
       description:
         "An online photo mosaic generator that allows users to collaboratively prepare and render stunning mosaics.",
       imageUrl: "https://cdn.dorahacks.io/static/files/1947da8fb2dac26bc47d6e94f249987f.png",
-      githubUrl: "https://github.com/IsaacJ60/uofthacks-12",
+      githubUrl: "https://github.com/IsaacJ60/The-Bigger-Picture",
       liveUrl: "https://dorahacks.io/buidl/21598",
       tags: ["Amazon S3", "mySQL", "Vue.js", "Flask", "Python"],
+    },
+    {
+      title: "Will You Be My Valentine? 3D Edition",
+      description:
+        "A beautiful, interactive 3D Valentine's desktop website featuring a custom Three.js scene, Valentine's card, and smooth animations. Built with React, Three.js, @react-three/fiber, Framer Motion, and React Scroll Motion.",
+      imageUrl: "https://github.com/user-attachments/assets/d116d81c-d0a3-4479-9a3f-276eaac9897b",
+      githubUrl: "https://github.com/IsaacJ60/Valentines",
+      liveUrl: "https://valentine.isaacjiang.ca",
+      tags: ["React", "Three.js", "TypeScript"],
+    },
+    {
+      title: "StudyLock",
+      description:
+        "A 3-in-1 studying application that detects distractions and sends text message alerts if you are caught scrolling on your phone, a plushie that shouts at you when you stray off task, and an integrated to-do list.",
+      imageUrl: "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/003/268/613/datas/original.png",
+      githubUrl: "https://github.com/IsaacJ60/StudyLock",
+      liveUrl: "https://devpost.com/software/focuslock-d7iajx",
+      tags: ["React Native", "Flask", "Twilio", "Python", "C++", "TypeScript", "OpenAI API"],
     },
     {
       title: "EcoDash",
       description:
         "A full-stack application that empowers users to take action on world issues through up-to-date information on global developments relating to the UN's 17 sustainable development goals.",
       imageUrl: "https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/003/209/324/datas/medium.png",
-      githubUrl: "https://github.com/IsaacJ60/DeltaHacks-2025",
+      githubUrl: "https://github.com/IsaacJ60/EcoDash",
       liveUrl: "https://devpost.com/software/environmental-development-kit",
       tags: ["Vue.js", "Flask", "Selenium", "Python", "Git", "Cohere API"],
     },
@@ -69,7 +87,7 @@ const ProjectsGrid = ({
       imageUrl: "https://raw.githubusercontent.com/IsaacJ60/personal-website-v3/refs/heads/master/src/images/kanboy.png",
       githubUrl: "https://github.com/IsaacJ60/kanboy",
       liveUrl: "https://devpost.com/software/kanboy",
-      tags: ["React", "Discord API", "Python"],
+      tags: ["React", "JavaScript", "Discord API", "Python"],
     },
     {
       title: "Alan's Adventure",
