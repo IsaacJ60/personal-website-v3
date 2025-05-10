@@ -26,6 +26,14 @@ const Timeline = ({
   colors,
   experiences = [
     {
+      date: "May 2025 - Present",
+      title: "SWE Intern",
+      company: "University of Waterloo IST (Portal)",
+      location: "Waterloo, ON",
+      description:
+        "Multi-platform, full stack development on the University of Waterloo's flagship student success dashboard - Portal.",
+    },
+    {
       date: "February 2025 - Present",
       title: "Web Developer",
       company: "University of Waterloo Japanese Student Association",
@@ -34,7 +42,7 @@ const Timeline = ({
         "Developing and maintaining the club's website, using React, TypeScript, and Figma.",
     },
     {
-      date: "December 2024 - Present",
+      date: "December 2024 - February 2025",
       title: "Logistics Lead",
       company: "University of Waterloo Data Science Club",
       location: "Waterloo, ON",
