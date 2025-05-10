@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { cn } from "@/lib/utils";
 import ProjectCard from "./ProjectCard";
 
@@ -145,6 +145,13 @@ const ProjectsGrid = ({
     },
   ],
 }: ProjectsGridProps) => {
+  // State to toggle showing all projects
+  const [showAll, setShowAll] = useState(false);
+
+  // Determine how many to show initially (first row: 3 items)
+  const INITIAL_COUNT = 3;
+  const visibleProjects = showAll ? projects : projects.slice(0, INITIAL_COUNT);
+
   return (
     <section
       id="projects"
@@ -153,9 +160,6 @@ const ProjectsGrid = ({
         "overflow-hidden",
         className,
       )}
-      style={{
-        
-      }}
     >
       <div className="container mx-auto relative">
         <h2
@@ -170,7 +174,7 @@ const ProjectsGrid = ({
         </h2>
 
         <div className="z-50 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {projects.map((project, index) => (
+          {visibleProjects.map((project, index) => (
             <ProjectCard
               key={index}
               colors={colors}
@@ -183,6 +187,25 @@ const ProjectsGrid = ({
             />
           ))}
         </div>
+
+        {/* Show More / Show Less button */}
+        {projects.length > INITIAL_COUNT && (
+          <div className="flex justify-center mt-8">
+            <button
+              onClick={() => setShowAll((prev) => !prev)}
+              className={cn(
+                "px-6 py-2 rounded font-medium transition-colors"
+              )}
+              style={{
+                backgroundColor: colors
+                  ? `rgba(${colors.primary.r}, ${colors.primary.g}, ${colors.primary.b}, 0.3)`
+                  : "#64B5F6",
+              }}  
+            >
+              {showAll ? "Show Less" : "Show More"}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
