@@ -20,7 +20,7 @@ interface AvatarProps {
 }
 
 const Avatar = ({
-  src = "https://raw.githubusercontent.com/IsaacJ60/personal-website-v3/refs/heads/master/src/images/isaac.png",
+  src = "https://avatars.githubusercontent.com/u/102918320?v=4",
   alt = "Profile Picture",
   className,
   fallback = "IJ",

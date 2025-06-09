@@ -125,9 +125,9 @@ const Home = () => {
               }}
             >
 
-              For me, storytelling is something that transcends the places and realities that we live in. I've found, in particular,
-              three mediums I love using: video editing, writing, and programming. Whether I’m piecing together moments that are rendered
-              in a .mov file, typing out words into a .docx, or writing a try-except in a .py file, I’m always looking for ways to create something special.
+              For me, storytelling is an instrument that transcends the pragmatic, physical world that we live in. In particular, I've discovered
+              three mediums I love using: videos, writing, and software. Whether I’m piecing together moments to be rendered
+              in a .mov, typing characters into a .docx, or developing an API endpoint in a .py, I’m always trying to create something special.
             </p>
 
             <p
@@ -136,17 +136,8 @@ const Home = () => {
                 color: `rgb(${currentColors.primary.r}, ${currentColors.primary.g}, ${currentColors.primary.b})`,
               }}
             >
-              With videos, I can create narrative's that are easy to understand and appreciate. With writing, I can create intricate worlds with histories yet to be told.
-              With programming, I can tell the story of games and big data.
-            </p>
-
-            <p
-              className="text-sm transition-colors duration-300 font-mono"
-              style={{
-                color: `rgb(${currentColors.primary.r}, ${currentColors.primary.g}, ${currentColors.primary.b})`,
-              }}
-            >
-              (feeling very inspired after writing this&hellip; time for a new project! 😂)
+              With videos, I can create narrative's that move and inspire. With writing, I can breathe life into unknown worlds.
+              With programming, I can develop tools that change lives.
             </p>
           </div>
         </div>

@@ -28,7 +28,7 @@ const Timeline = ({
     {
       date: "May 2025 - Present",
       title: "SWE Intern",
-      company: "University of Waterloo IST (Portal)",
+      company: "UW Portal (University of Waterloo IST)",
       location: "Waterloo, ON",
       description:
         "Multi-platform, full stack development on the University of Waterloo's flagship student success dashboard - Portal.",
