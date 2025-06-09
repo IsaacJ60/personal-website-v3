@@ -194,11 +194,11 @@ const ProjectsGrid = ({
             <button
               onClick={() => setShowAll((prev) => !prev)}
               className={cn(
-                "px-6 py-2 rounded font-medium transition-colors"
+                "px-6 py-2 rounded-xl font-medium transition-colors hover:scale-105 transition-all duration-300",
               )}
               style={{
                 backgroundColor: colors
-                  ? `rgba(${colors.primary.r}, ${colors.primary.g}, ${colors.primary.b}, 0.3)`
+                  ? `rgba(${colors.primary.r}, ${colors.primary.g}, ${colors.primary.b}, 0.8)`
                   : "#64B5F6",
               }}  
             >
