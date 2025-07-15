@@ -22,6 +22,7 @@ const Navigation = ({
     { href: "#about", label: "About" },
     { href: "#projects", label: "Projects" },
     { href: "#experience", label: "Experience" },
+    { href: "/story", label: "Story" }
   ],
 }: NavigationProps) => {
   const scrollToSection = (
@@ -62,9 +63,11 @@ const Navigation = ({
             <li key={link.href}>
               <a
                 href={link.href}
-                onClick={(e) => scrollToSection(e, link.href)}
-                className="text-sm font-medium transition-colors duration-300 relative"
-                style={{ color: textColor }}
+                className={cn(
+                  "text-sm font-medium transition-colors duration-300 relative py-2 px-4 rounded-xl", // Add padding and rounded corners
+                  link.label === "Story" && "bg-opacity-25 hover:bg-opacity-50", // Special styling for "Creations"
+                )}
+                style={{ color: textColor, backgroundColor: link.label === "Story" ? borderColor : "transparent" }} // Customize the color for "Creations"
               >
                 {link.label}
               </a>

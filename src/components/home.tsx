@@ -5,6 +5,7 @@ import ProjectsGrid from "./portfolio/ProjectsGrid";
 import Timeline from "./portfolio/Timeline";
 import FloatingActions from "./portfolio/FloatingActions";
 import SnowEffect from "./portfolio/SnowEffect";
+import MagicBento from "./ui/Bento";
 
 const interpolateColor = (start: any, end: any, progress: number) => {
   const r = Math.round(start.r + (end.r - start.r) * progress);
@@ -84,6 +85,7 @@ const Home = () => {
         }}
       >
         <div className="container mx-auto">
+
           <h2
             className="text-3xl font-bold mb-10 text-center transition-colors duration-300"
             style={{
@@ -92,52 +94,54 @@ const Home = () => {
           >
             About Me
           </h2>
-          <div className="text-lg/8 max-w-4xl mx-auto text-center tracking-wide">
+
+          <div className="hidden lg:flex justify-center ">
+            <MagicBento
+                              textAutoHide={false}
+                              enableStars={true}
+                              enableSpotlight={true}
+                              enableBorderGlow={true}
+                              enableTilt={true}
+                              enableMagnetism={true}
+                              clickEffect={true}
+                              spotlightRadius={500}
+                              particleCount={12}
+                              glowColor="250, 100, 50"
+                          />
+          </div>
+          
+          <div className="block lg:hidden text-lg/8 max-w-4xl mx-auto text-center tracking-wide">
             <p
-              className=" mb-6 transition-colors duration-300"
+              className=" mb-6 transition-colors duration-300 leading-snug"
               style={{
                 color: `rgb(${currentColors.primary.r}, ${currentColors.primary.g}, ${currentColors.primary.b})`,
               }}
             >
-              As a child, I loved math and programming.
+              As a child, I fell in love with the idea of logic and problem-solving.
               After all, in elementary school, math was my favorite subject, and by high school,
               that passion had naturally evolved into a love for computer science.
               So, of course, at the ripe age of 12, my dad—armed with his exciting math and engineering degrees—introduced me to&hellip; Python!
-              Since that time, I’ve been coding projects, big and small.
-
 
             </p>
             <p
-              className=" mb-6 transition-colors duration-300 "
+              className=" mb-6 transition-colors duration-300 leading-snug"
               style={{
                 color: `rgb(${currentColors.primary.r}, ${currentColors.primary.g}, ${currentColors.primary.b})`,
               }}
             >
               Another one of my most sincere and personal passions lies in storytelling. 
-
         
             </p>
 
             <p
-              className="mb-6 transition-colors duration-300"
+              className="mb-6 transition-colors duration-300 leading-snug"
               style={{
                 color: `rgb(${currentColors.primary.r}, ${currentColors.primary.g}, ${currentColors.primary.b})`,
               }}
             >
 
-              For me, storytelling is an instrument that transcends the pragmatic, physical world that we live in. In particular, I've discovered
-              three mediums I love using: videos, writing, and software. Whether I’m piecing together moments to be rendered
-              in a .mov, typing characters into a .docx, or developing an API endpoint in a .py, I’m always trying to create something special.
-            </p>
-
-            <p
-              className=" mb-10 transition-colors duration-300 "
-              style={{
-                color: `rgb(${currentColors.primary.r}, ${currentColors.primary.g}, ${currentColors.primary.b})`,
-              }}
-            >
-              With videos, I can create narrative's that move and inspire. With writing, I can breathe life into unknown worlds.
-              With programming, I can develop tools that change lives.
+              For me, storytelling goes beyond the pragmatic, physical world that we live in. Over the years, I've stumbled upon
+              three mediums I love: videos, writing, and software. Whether I’m piecing together clips for a .mov, typing characters into a .docx, or developing an API in .py, I’ve always loved creating something special.
             </p>
           </div>
         </div>
