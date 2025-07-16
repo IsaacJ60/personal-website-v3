@@ -225,6 +225,15 @@ const Portfolio = () => {
                             </p>
                         </div>
                     </FadeContent>
+
+                    <FadeContent blur={false} duration={1000} easing="ease-out" initialOpacity={0}>
+                        <div className="relative group">
+                            <YouTubeEmbed videoId="4ar8PuAUfvk" title="Valorant Edit!" />
+                            <p className="absolute text-white text-sm bg-black/60 px-2 py-1 rounded">
+                                Valorant Edit! Did this a while ago...
+                            </p>
+                        </div>
+                    </FadeContent>
                 </div>
             </div>
         </div>
