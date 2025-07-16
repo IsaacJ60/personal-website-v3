@@ -154,7 +154,6 @@ const Portfolio = () => {
 
                     <FadeContent blur={false} duration={1000} easing="ease-out" initialOpacity={0}>
                         <ImageCarousel images={[
-                            "/images/windsor1.webp",
                             "/images/windsor2.webp",
                             "/images/waterloo1.webp",
                             "/images/waterloo2.webp",
@@ -195,11 +194,14 @@ const Portfolio = () => {
 
                     <FadeContent blur={false} duration={1000} easing="ease-out" initialOpacity={0}>
                         <ImageCarousel images={[
-                            "/images/china1.webp",
-                            "/images/china2.webp",
                             "/images/china3.webp",
                             "/images/china4.webp",
-                        ]} caption="China" colors={currentColors} delay={5000} />
+                            "/images/windsor1.webp",
+                            "/images/london1.webp",
+                            "/images/pfps1.webp",
+                            "/images/watch1.webp",
+                            "/images/transformers1.webp",
+                        ]} caption="Me!" colors={currentColors} delay={5000} />
                     </FadeContent>
 
                     <FadeContent blur={false} duration={1000} easing="ease-out" initialOpacity={0}>
@@ -222,17 +224,6 @@ const Portfolio = () => {
                                 Read more at <a href="https://medium.com/@tinytalesisaac/the-judge-44b93c75ae90" target="_blank" rel="noopener noreferrer"><u>TinyTales by Isaac</u></a>.
                             </p>
                         </div>
-                    </FadeContent>
-
-                    <FadeContent blur={false} duration={1000} easing="ease-out" initialOpacity={0}>
-                        <ImageCarousel images={[
-                            "/images/london1.webp",
-                            "/images/pfps1.webp",
-                            "/images/watch1.webp",
-                            "/images/watch2.webp",
-                            "/images/transformers1.webp",
-                            "/images/transformers2.webp",
-                        ]} caption="Other" colors={currentColors} delay={3000} />
                     </FadeContent>
                 </div>
             </div>
