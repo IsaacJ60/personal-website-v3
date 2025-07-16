@@ -40,8 +40,10 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, caption, colors, 
             <img
               src={src}
               alt={`Slide ${i + 1}`}
+              loading="lazy"
               className="w-full h-full object-cover rounded-xl"
             />
+            <div className="swiper-lazy-preloader swiper-lazy-preloader-white" />
           </SwiperSlide>
         ))}
       </Swiper>

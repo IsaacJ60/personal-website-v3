@@ -59,12 +59,11 @@ const Portfolio = () => {
             }}
         >
             <Aurora
-                            colorStops={["#ff6229", "#ffd194", "#ed2626"]}
-                            blend={0.5}
-                            amplitude={1.0}
-                            speed={0.5}
-                        />
-            <SplashCursor></SplashCursor>
+                colorStops={["#ff6229", "#ffd194", "#ed2626"]}
+                blend={0.5}
+                amplitude={1.0}
+                speed={0.5}
+            />
             <SnowEffect />
 
             <div className="absolute top-6 left-4 z-50">
@@ -132,26 +131,6 @@ const Portfolio = () => {
                     </div>
 
 
-                    <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
-                        <ImageCarousel images={[
-                            "/images/toronto.webp",
-                            "/images/toronto2.webp",
-                            "/images/toronto3.webp",
-                            "/images/toronto4.webp",
-                            "/images/toronto5.webp",
-                            "/images/toronto6.webp",
-                        ]} caption="Toronto" colors={currentColors} delay={2000} />
-                    </FadeContent>
-
-                    <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
-                        <ImageCarousel images={[
-                            "/images/windsor1.webp",
-                            "/images/windsor2.webp",
-                            "/images/waterloo1.webp",
-                            "/images/waterloo2.webp",
-                        ]} caption="Windsor & Waterloo" colors={currentColors} delay={3000} />
-                    </FadeContent>
-
                     <AnimatedContent
                         distance={150}
                         direction="horizontal"
@@ -164,6 +143,26 @@ const Portfolio = () => {
                         threshold={0}
                         delay={0.3}
                     >
+                        <ImageCarousel images={[
+                            "/images/toronto.webp",
+                            "/images/toronto2.webp",
+                            "/images/toronto3.webp",
+                            "/images/toronto4.webp",
+                            "/images/toronto5.webp",
+                            "/images/toronto6.webp",
+                        ]} caption="Toronto" colors={currentColors} delay={3000} />
+                    </AnimatedContent>
+
+                    <FadeContent blur={false} duration={1000} easing="ease-out" initialOpacity={0}>
+                        <ImageCarousel images={[
+                            "/images/windsor1.webp",
+                            "/images/windsor2.webp",
+                            "/images/waterloo1.webp",
+                            "/images/waterloo2.webp",
+                        ]} caption="Windsor & Waterloo" colors={currentColors} delay={5000} />
+                    </FadeContent>
+
+                    <FadeContent blur={false} duration={1000} easing="ease-out" initialOpacity={0}>
                         <div className="flex space-x-4 relative p-6 border rounded-2xl backdrop-blur-md shadow-xl transition-all duration-300"
                             style={{
                                 borderColor: `rgb(${currentColors.border.r}, ${currentColors.border.g}, ${currentColors.border.b})`,
@@ -184,9 +183,9 @@ const Portfolio = () => {
                                 <img src="/images/darktable.webp" alt="Lightroom Logo" className="h-10 sm:h-12 md:h-16 lg:h-20 w-auto" />
                             </div>
                         </div>
-                    </AnimatedContent>
+                    </FadeContent>
 
-                    <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
+                    <FadeContent blur={false} duration={1000} easing="ease-out" initialOpacity={0}>
                         <div className="relative group">
                             <YouTubeEmbed videoId="CfNOhgLqsO0" title="Horimiya AMV" />
                             <p className="absolute bottom-10 text-white text-sm bg-black/60 px-2 py-1 rounded">
@@ -195,38 +194,16 @@ const Portfolio = () => {
                         </div>
                     </FadeContent>
 
-                    <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
+                    <FadeContent blur={false} duration={1000} easing="ease-out" initialOpacity={0}>
                         <ImageCarousel images={[
                             "/images/china1.webp",
                             "/images/china2.webp",
                             "/images/china3.webp",
                             "/images/china4.webp",
-                        ]} caption="China" colors={currentColors} delay={1500} />
+                        ]} caption="China" colors={currentColors} delay={5000} />
                     </FadeContent>
 
-                    <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
-                        <ImageCarousel images={[
-                            "/images/london1.webp",
-                            "/images/pfps1.webp",
-                            "/images/watch1.webp",
-                            "/images/watch2.webp",
-                            "/images/transformers1.webp",
-                            "/images/transformers2.webp",
-                        ]} caption="Other" colors={currentColors} delay={2000} />
-                    </FadeContent>
-
-                    <AnimatedContent
-                        distance={150}
-                        direction="horizontal"
-                        reverse={false}
-                        duration={1.2}
-                        ease="power3.out"
-                        initialOpacity={0.2}
-                        animateOpacity
-                        scale={1.1}
-                        threshold={0}
-                        delay={0.3}
-                    >
+                    <FadeContent blur={false} duration={1000} easing="ease-out" initialOpacity={0}>
                         <div className="relative p-6 border rounded-2xl backdrop-blur-md shadow-xl transition-all duration-300"
                             style={{
                                 borderColor: `rgb(${currentColors.border.r}, ${currentColors.border.g}, ${currentColors.border.b})`,
@@ -246,7 +223,18 @@ const Portfolio = () => {
                                 Read more at <a href="https://medium.com/@tinytalesisaac/the-judge-44b93c75ae90" target="_blank" rel="noopener noreferrer"><u>TinyTales by Isaac</u></a>.
                             </p>
                         </div>
-                    </AnimatedContent>
+                    </FadeContent>
+
+                    <FadeContent blur={false} duration={1000} easing="ease-out" initialOpacity={0}>
+                        <ImageCarousel images={[
+                            "/images/london1.webp",
+                            "/images/pfps1.webp",
+                            "/images/watch1.webp",
+                            "/images/watch2.webp",
+                            "/images/transformers1.webp",
+                            "/images/transformers2.webp",
+                        ]} caption="Other" colors={currentColors} delay={3000} />
+                    </FadeContent>
                 </div>
             </div>
         </div>
