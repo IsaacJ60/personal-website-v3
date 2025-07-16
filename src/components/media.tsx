@@ -66,11 +66,11 @@ const Portfolio = () => {
                         />
             <SplashCursor></SplashCursor>
             <SnowEffect />
-      // button to go back go home
-            <div className="absolute top-4 left-4 z-50">
+
+            <div className="absolute top-6 left-4 z-50">
                 <a
                     href="/"
-                    className="px-4 py-2 bg-black text-white rounded-lg shadow-lg hover:bg-gray-700 transition-colors"
+                    className="px-4 py-2 bg-opacity-50 hover:bg-opacity-75 bg-black text-white rounded-lg shadow-xl transition-colors"
                 >
                     Back to Home
                 </a>
@@ -134,21 +134,21 @@ const Portfolio = () => {
 
                     <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
                         <ImageCarousel images={[
-                            "src/images/toronto.jpg",
-                            "src/images/toronto2.jpg",
-                            "src/images/toronto3.jpg",
-                            "src/images/toronto4.jpg",
-                            "src/images/toronto5.jpg",
-                            "src/images/toronto6.jpg",
+                            "/images/toronto.jpg",
+                            "/images/toronto2.jpg",
+                            "/images/toronto3.jpg",
+                            "/images/toronto4.jpg",
+                            "/images/toronto5.jpg",
+                            "/images/toronto6.jpg",
                         ]} caption="Toronto" colors={currentColors} delay={2000} />
                     </FadeContent>
 
                     <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
                         <ImageCarousel images={[
-                            "src/images/windsor1.jpg",
-                            "src/images/windsor2.jpg",
-                            "src/images/waterloo1.jpg",
-                            "src/images/waterloo2.jpg",
+                            "/images/windsor1.jpg",
+                            "/images/windsor2.jpg",
+                            "/images/waterloo1.jpg",
+                            "/images/waterloo2.jpg",
                         ]} caption="Windsor & Waterloo" colors={currentColors} delay={3000} />
                     </FadeContent>
 
@@ -180,8 +180,8 @@ const Portfolio = () => {
                                 </p>
                             </div>
                             <div className="flex flex-col space-y-4 items-center justify-center w-24 md:w-48">
-                                <img src="src/images/aftereffects.png" alt="After Effects Logo" className="h-10 sm:h-12 md:h-16 lg:h-20 w-auto" />
-                                <img src="src/images/darktable.png" alt="Lightroom Logo" className="h-10 sm:h-12 md:h-16 lg:h-20 w-auto" />
+                                <img src="/images/aftereffects.png" alt="After Effects Logo" className="h-10 sm:h-12 md:h-16 lg:h-20 w-auto" />
+                                <img src="/images/darktable.png" alt="Lightroom Logo" className="h-10 sm:h-12 md:h-16 lg:h-20 w-auto" />
                             </div>
                         </div>
                     </AnimatedContent>
@@ -197,21 +197,21 @@ const Portfolio = () => {
 
                     <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
                         <ImageCarousel images={[
-                            "src/images/china1.jpg",
-                            "src/images/china2.jpg",
-                            "src/images/china3.jpg",
-                            "src/images/china4.jpg",
+                            "/images/china1.jpg",
+                            "/images/china2.jpg",
+                            "/images/china3.jpg",
+                            "/images/china4.jpg",
                         ]} caption="China" colors={currentColors} delay={1500} />
                     </FadeContent>
 
                     <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
                         <ImageCarousel images={[
-                            "src/images/london1.jpg",
-                            "src/images/pfps1.jpg",
-                            "src/images/watch1.jpg",
-                            "src/images/watch2.jpg",
-                            "src/images/transformers1.jpg",
-                            "src/images/transformers2.jpg",
+                            "/images/london1.jpg",
+                            "/images/pfps1.jpg",
+                            "/images/watch1.jpg",
+                            "/images/watch2.jpg",
+                            "/images/transformers1.jpg",
+                            "/images/transformers2.jpg",
                         ]} caption="Other" colors={currentColors} delay={2000} />
                     </FadeContent>
 
