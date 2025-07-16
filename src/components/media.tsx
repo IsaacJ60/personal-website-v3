@@ -6,7 +6,6 @@ import TextPressure from "./ui/TextPressure";
 import AnimatedContent from "./ui/Animated";
 import FadeContent from "./ui/Faded";
 import Aurora from "./ui/Aurora";
-import SplashCursor from "./ui/Splash";
 
 const interpolateColor = (start: any, end: any, progress: number) => {
     const r = Math.round(start.r + (end.r - start.r) * progress);
