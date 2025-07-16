@@ -134,21 +134,21 @@ const Portfolio = () => {
 
                     <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
                         <ImageCarousel images={[
-                            "/images/toronto.jpg",
-                            "/images/toronto2.jpg",
-                            "/images/toronto3.jpg",
-                            "/images/toronto4.jpg",
-                            "/images/toronto5.jpg",
-                            "/images/toronto6.jpg",
+                            "/images/toronto.webp",
+                            "/images/toronto2.webp",
+                            "/images/toronto3.webp",
+                            "/images/toronto4.webp",
+                            "/images/toronto5.webp",
+                            "/images/toronto6.webp",
                         ]} caption="Toronto" colors={currentColors} delay={2000} />
                     </FadeContent>
 
                     <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
                         <ImageCarousel images={[
-                            "/images/windsor1.jpg",
-                            "/images/windsor2.jpg",
-                            "/images/waterloo1.jpg",
-                            "/images/waterloo2.jpg",
+                            "/images/windsor1.webp",
+                            "/images/windsor2.webp",
+                            "/images/waterloo1.webp",
+                            "/images/waterloo2.webp",
                         ]} caption="Windsor & Waterloo" colors={currentColors} delay={3000} />
                     </FadeContent>
 
@@ -180,8 +180,8 @@ const Portfolio = () => {
                                 </p>
                             </div>
                             <div className="flex flex-col space-y-4 items-center justify-center w-24 md:w-48">
-                                <img src="/images/aftereffects.png" alt="After Effects Logo" className="h-10 sm:h-12 md:h-16 lg:h-20 w-auto" />
-                                <img src="/images/darktable.png" alt="Lightroom Logo" className="h-10 sm:h-12 md:h-16 lg:h-20 w-auto" />
+                                <img src="/images/aftereffects.webp" alt="After Effects Logo" className="h-10 sm:h-12 md:h-16 lg:h-20 w-auto" />
+                                <img src="/images/darktable.webp" alt="Lightroom Logo" className="h-10 sm:h-12 md:h-16 lg:h-20 w-auto" />
                             </div>
                         </div>
                     </AnimatedContent>
@@ -197,21 +197,21 @@ const Portfolio = () => {
 
                     <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
                         <ImageCarousel images={[
-                            "/images/china1.jpg",
-                            "/images/china2.jpg",
-                            "/images/china3.jpg",
-                            "/images/china4.jpg",
+                            "/images/china1.webp",
+                            "/images/china2.webp",
+                            "/images/china3.webp",
+                            "/images/china4.webp",
                         ]} caption="China" colors={currentColors} delay={1500} />
                     </FadeContent>
 
                     <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
                         <ImageCarousel images={[
-                            "/images/london1.jpg",
-                            "/images/pfps1.jpg",
-                            "/images/watch1.jpg",
-                            "/images/watch2.jpg",
-                            "/images/transformers1.jpg",
-                            "/images/transformers2.jpg",
+                            "/images/london1.webp",
+                            "/images/pfps1.webp",
+                            "/images/watch1.webp",
+                            "/images/watch2.webp",
+                            "/images/transformers1.webp",
+                            "/images/transformers2.webp",
                         ]} caption="Other" colors={currentColors} delay={2000} />
                     </FadeContent>
 

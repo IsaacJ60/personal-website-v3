@@ -2,6 +2,7 @@ import path from "path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import { tempo } from "tempo-devtools/dist/vite";
+import viteCompression from "vite-plugin-compression";
 
 const conditionalPlugins: [string, Record<string, any>][] = [];
 
@@ -21,6 +22,11 @@ export default defineConfig({
       plugins: conditionalPlugins,
     }),
     tempo(),
+    viteCompression({
+      threshold: 10240, // Only compress files larger than 10KB
+      algorithm: "gzip",
+      ext: ".gz",
+    }),
   ],
   resolve: {
     preserveSymlinks: true,

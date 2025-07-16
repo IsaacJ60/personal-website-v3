@@ -23,7 +23,7 @@ const StarEffect: React.FC = () => {
       rotationSpeed: number;
     }> = [];
     const starImage = new Image();
-    starImage.src = "/images/star.png"; // Replace with the path to your star image
+    starImage.src = "/images/star.webp"; // Replace with the path to your star image
 
     // Resize canvas
     const resizeCanvas = () => {

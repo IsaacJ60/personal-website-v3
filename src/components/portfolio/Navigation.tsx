@@ -58,7 +58,7 @@ const Navigation = ({
       }}
     >
       <div className="container mx-auto px-6 h-16 flex items-center justify-center">
-        <ul className="flex space-x-8">
+        <ul className="flex space-x-0 md:space-x-8 lg:space-x-16">
           {links.map((link) => (
             <li key={link.href}>
               <a
