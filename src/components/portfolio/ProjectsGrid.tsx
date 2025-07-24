@@ -27,6 +27,14 @@ const ProjectsGrid = ({
   colors,
   projects = [
     {
+      title: "Personal Raspberry Pi Cloud Server",
+      description: "A self-hosted cloud storage solution powered by Nextcloud, running on a Raspberry Pi 3 B+ with DietPi for lightweight performance. Features a USB/SSD boot setup, dynamic DNS, secure HTTPS with Let's Encrypt, and full LAN/remote access.",
+      imageUrl: "/images/nextcloud.webp",
+      githubUrl: "",
+      liveUrl: "",
+      tags: ["DietPi", "Nextcloud", "Raspberry Pi"],
+    },
+    {
       title: "The Bigger Picture.",
       description:
         "An online photo mosaic generator that allows users to collaboratively prepare and render stunning mosaics.",
