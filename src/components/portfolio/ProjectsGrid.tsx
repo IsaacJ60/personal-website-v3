@@ -27,7 +27,7 @@ const ProjectsGrid = ({
   colors,
   projects = [
     {
-      title: "Personal Raspberry Pi Cloud Server",
+      title: "Raspberry Pi Cloud Server",
       description: "A self-hosted cloud storage solution powered by Nextcloud, running on a Raspberry Pi 3 B+ with DietPi for lightweight performance. Features a USB/SSD boot setup, dynamic DNS, secure HTTPS with Let's Encrypt, and full LAN/remote access.",
       imageUrl: "/images/nextcloud.webp",
       githubUrl: "",
@@ -35,13 +35,12 @@ const ProjectsGrid = ({
       tags: ["DietPi", "Nextcloud", "Raspberry Pi"],
     },
     {
-      title: "The Bigger Picture.",
-      description:
-        "An online photo mosaic generator that allows users to collaboratively prepare and render stunning mosaics.",
-      imageUrl: "https://cdn.dorahacks.io/static/files/1947da8fb2dac26bc47d6e94f249987f.png",
-      githubUrl: "https://github.com/IsaacJ60/The-Bigger-Picture",
-      liveUrl: "https://dorahacks.io/buidl/21598",
-      tags: ["Amazon S3", "mySQL", "Vue.js", "Flask", "Python"],
+      title: "FreePlay: Audio Aggregator and Player",
+      description: "A cross-platform desktop music player with Electron and Vite, with core features to import Spotify playlists by integrating the Spotify API and youtube-dl-exec with a custom metadata aggregation pipeline",
+      imageUrl: "/images/freeplay.webp",
+      githubUrl: "https://github.com/IsaacJ60/FreePlay",
+      liveUrl: "https://github.com/IsaacJ60/FreePlay",
+      tags: ["Electron", "Vite", "JavaScript", "HTML/CSS"],
     },
     {
       title: "Will You Be My Valentine? 3D Edition",
@@ -51,6 +50,15 @@ const ProjectsGrid = ({
       githubUrl: "https://github.com/IsaacJ60/Valentines",
       liveUrl: "https://valentine.isaacjiang.ca",
       tags: ["React", "Three.js", "TypeScript"],
+    },
+    {
+      title: "The Bigger Picture.",
+      description:
+        "An online photo mosaic generator that allows users to collaboratively prepare and render stunning mosaics.",
+      imageUrl: "https://cdn.dorahacks.io/static/files/1947da8fb2dac26bc47d6e94f249987f.png",
+      githubUrl: "https://github.com/IsaacJ60/The-Bigger-Picture",
+      liveUrl: "https://dorahacks.io/buidl/21598",
+      tags: ["Amazon S3", "mySQL", "Vue.js", "Flask", "Python"],
     },
     {
       title: "StudyLock",
