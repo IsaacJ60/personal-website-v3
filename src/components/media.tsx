@@ -193,6 +193,15 @@ const Portfolio = () => {
                     </FadeContent>
 
                     <FadeContent blur={false} duration={1000} easing="ease-out" initialOpacity={0}>
+                        <div className="relative group">
+                            <YouTubeEmbed videoId="3rFp4DdBk8g" title="Mograph Style" />
+                            <p className="absolute bottom-10 text-white text-sm bg-black/60 px-2 py-1 rounded">
+                                Mograph Style
+                            </p>
+                        </div>
+                    </FadeContent>
+
+                    {/* <FadeContent blur={false} duration={1000} easing="ease-out" initialOpacity={0}>
                         <ImageCarousel images={[
                             "/images/china3.webp",
                             "/images/china4.webp",
@@ -202,7 +211,7 @@ const Portfolio = () => {
                             "/images/watch1.webp",
                             "/images/transformers1.webp",
                         ]} caption="Me!" colors={currentColors} delay={5000} />
-                    </FadeContent>
+                    </FadeContent> */}
 
                     <FadeContent blur={false} duration={1000} easing="ease-out" initialOpacity={0}>
                         <div className="relative p-6 border rounded-2xl backdrop-blur-md shadow-xl transition-all duration-300"
