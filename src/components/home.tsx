@@ -6,6 +6,7 @@ import Timeline from "./portfolio/Timeline";
 import FloatingActions from "./portfolio/FloatingActions";
 import SnowEffect from "./portfolio/SnowEffect";
 import MagicBento from "./ui/Bento";
+import YouTubeEmbed from "./portfolio/YoutubeEmbed";
 
 const interpolateColor = (start: any, end: any, progress: number) => {
   const r = Math.round(start.r + (end.r - start.r) * progress);
@@ -74,6 +75,17 @@ const Home = () => {
       <Navigation colors={currentColors} />
       <HeroSection colors={currentColors} />
       <FloatingActions colors={currentColors} />
+
+      <section
+        id="intro-video"
+        className="py-12 px-6 transition-colors duration-300"
+      >
+        <div className="container mx-auto">
+          <div className="max-w-4xl mx-auto">
+            <YouTubeEmbed videoId="2SYfT-AL6Ms" title="About Me" />
+          </div>
+        </div>
+      </section>
       
       <div className="backdrop-blur-sm">
 
