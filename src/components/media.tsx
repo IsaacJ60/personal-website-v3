@@ -94,7 +94,7 @@ const Portfolio = () => {
                 {/* Grid Layout for Free Media Placement */}
                 <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {/* Example Media Tile */}
-                    <AnimatedContent
+                    {/* <AnimatedContent
                         distance={150}
                         direction="horizontal"
                         reverse={true}
@@ -112,7 +112,7 @@ const Portfolio = () => {
                                 First try at a one minute short film :D
                             </p>
                         </div>
-                    </AnimatedContent>
+                    </AnimatedContent> */}
 
                     <div className="relative p-6 border rounded-2xl backdrop-blur-md shadow-xl transition-all duration-300"
                         style={{
