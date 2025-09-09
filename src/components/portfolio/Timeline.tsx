@@ -26,7 +26,7 @@ const Timeline = ({
   colors,
   experiences = [
     {
-      date: "May 2025 - Present",
+      date: "May 2025 - August 2025",
       title: "SWE Intern",
       company: "UW Portal (University of Waterloo IST)",
       location: "Waterloo, ON",
