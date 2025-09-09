@@ -21,7 +21,7 @@ const HeroSection = ({
   className,
   colors,
   name = "Isaac Jiang",
-  title = "SWE Intern @ UW Portal",
+  title = "Prev. SWE Intern @ UW Portal",
   subtitle = "University of Waterloo Computer Science",
   avatarProps,
   style,
