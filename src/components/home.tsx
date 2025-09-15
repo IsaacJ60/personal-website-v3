@@ -82,7 +82,7 @@ const Home = () => {
       >
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
-            <YouTubeEmbed videoId="2SYfT-AL6Ms" title="About Me" />
+            <YouTubeEmbed videoId="7UM1PwUl_dY" title="About Me" />
           </div>
         </div>
       </section>
