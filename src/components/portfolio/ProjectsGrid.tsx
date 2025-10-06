@@ -27,6 +27,22 @@ const ProjectsGrid = ({
   colors,
   projects = [
     {
+      title: "FATELESS Studios",
+      description: "Your personal no-code Game Development Studio. Create, play, and share video games with just one prompt. Powered by Gemini, ElevenLabs, and Pygame.",
+      imageUrl: "/images/fateless.webp",
+      githubUrl: "",
+      liveUrl: "",
+      tags: ["MCP", "Gemini", "Python", "Pygame", "ElevenLabs"],
+    },
+    {
+      title: "BeyondSight",
+      description: "A full AI-integrated wearable ecosystem designed to empower deafblind individuals with independence, communication, and safety.",
+      imageUrl: "/images/beyondsight.webp",
+      githubUrl: "",
+      liveUrl: "",
+      tags: ["Arduino", "Python", "ElevenLabs", "MongoDB", "Flask", "Whisper", "Genesys"],
+    },
+    {
       title: "Raspberry Pi Cloud Server",
       description: "A self-hosted cloud storage solution powered by Nextcloud, running on a Raspberry Pi 3 B+ with DietPi for lightweight performance. Features a USB/SSD boot setup, dynamic DNS, secure HTTPS with Let's Encrypt, and full LAN/remote access.",
       imageUrl: "/images/nextcloud.webp",
