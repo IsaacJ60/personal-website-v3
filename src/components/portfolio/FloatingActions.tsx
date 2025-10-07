@@ -35,7 +35,7 @@ const FloatingActions = ({
     {
       icon: <Linkedin className="w-6 h-6" />,
       label: "LinkedIn",
-      href: "https://www.linkedin.com/in/isaac6/",
+      href: "https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=isaac6",
     },
     {
       icon: <Youtube className="w-6 h-6" />,
